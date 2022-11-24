@@ -1,0 +1,60 @@
+﻿@page
+@model ASP.netCore1.Pages.BookList.CreateModel
+@{
+}
+<h2 class="text-1"> New Book </h2>
+<br /><br />
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container rounded border">
+        <div class="form-group row">
+            <div class="col-3 p-1 m-1">
+                <label asp-for="Book.Title" class="offset-5"></label>
+            </div>
+            <div class="col-6 p-1 m-1 ">
+                <input asp-for="Book.Title" class="form-control" />
+                <span asp-validation-for ="Book.Title" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 p-1 m-1 ">
+                <label asp-for="Book.Author" class="offset-5"></label>
+            </div>
+            <div class="col-6 p-1 m-1 ">
+                <input asp-for="Book.Author" class="form-control" />
+                <span asp-validation-for="Book.Author" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 p-1 m-1 ">
+                <label asp-for="Book.ISBN" class="offset-5"></label>
+            </div>
+            <div class="col-6 p-1 m-1 ">
+                <input asp-for="Book.ISBN" class="form-control" />
+                <span asp-validation-for="Book.ISBN" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 p-1 m-1 ">
+                <label asp-for="Book.Price" class="offset-5"></label>
+            </div>
+            <div class="col-6 p-1 m-1 ">
+                <input asp-for="Book.Price" class="form-control" />
+                <span asp-validation-for="Book.Price" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row p-1 m-1">
+            <div class="col-3 offset-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+            <div class="col-3">
+               <input type="submit" class="btn btn-info form-control" value="Save"/>
+            </div>
+        </div>
+    </div>
+   
+</form>
+@section scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
